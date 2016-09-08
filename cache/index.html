@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" data-module="Main">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Service Worker Demos: Cache</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/main.css">
+    <!--<link href="https://fonts.googleapis.com/css?family=Playfair+Display:900|Lato:300,400,700" rel="stylesheet" type='text/css'>-->
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/cache/cache.js', { scope: '/cache/' });
+        }
+    </script>
+
+</head>
+<body>
+
+<header class="l-restrain">
+    <p class="site-title"><span>Service Worker Demos</span></p>
+</header>
+
+<main>
+
+    <article data-cms-id='{{ id }}' data-cms-type='{{ type }}' class='c-article l-restrain'>
+
+        <h1 class="title">Cache</h1>
+        <p class="c-intro">Below are a lot of external images.</p>
+
+        <img src="1.jpeg" alt="">
+        <img src="2.jpeg" alt="">
+        <img src="3.jpeg" alt="">
+
+    </article>
+
+</main>
+
+</body>
+</html>
